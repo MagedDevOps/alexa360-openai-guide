@@ -1,71 +1,309 @@
-# OpenAI ChatGPT Integration Guide for alexa360
+# Full Guide
 
-A comprehensive guide for integrating OpenAI's powerful AI capabilities directly into your alexa360 chatbots, enabling intelligent, context-aware conversations with your users.
+**OpenAI ChatGPT Integration Guide**
 
-## 📚 What's Inside
+Complete Setup & Implementation Guide
 
-This guide covers everything you need to know about:
+This comprehensive guide will walk you through integrating OpenAI's powerful AI capabilities directly into your alexa360 chatbots, enabling intelligent, context-aware conversations with your users.
 
-- **OpenAI Assistant Setup** - Complete configuration and training
-- **Intent Detection** - AI-powered parameter extraction
-- **Embeddings** - Knowledge matching and response generation
-- **Vector Stores** - Advanced semantic search capabilities
-- **Flow Integration** - Step-by-step chatbot implementation
-- **Best Practices** - Production-ready recommendations
+## Introduction & Key Concepts
 
-## 🚀 Quick Start
+The alexa360 integration with OpenAI Assistant allows you to leverage the power of OpenAI directly within your chatbots. The OpenAI Assistant is a virtual assistant trained on your specific business data, enabling it to answer user inquiries effectively.
 
-1. **Clone this repository**
-   ```bash
-   git clone https://github.com/yourusername/alexa360-openai-guide.git
-   cd alexa360-openai-guide
-   ```
+{% embed url="https://raw.githubusercontent.com/MagedDevOps/alexa360-openai-guide/main/media/Screenshot%202025-08-20%20100224.png" %}
 
-2. **View the guide**
-   - Open `output.md` for the complete documentation
-   - All screenshots and images are included in the `media/` folder
+**Key Concepts**
 
-3. **Import to GitBook**
-   - Connect this repository to GitBook for automatic updates
-   - Or copy-paste content directly into GitBook
+* **OpenAI Assistant**: A virtual assistant trained on your uploaded business files, functioning like a searchable knowledge base.
+* **Assistant ID**: A unique identifier for your OpenAI Assistant within alexa360.
+* **Model**: The specific OpenAI model used by your assistant (e.g., gpt-4 turbo).
+* **Instructions**: Additional prompts or guidelines provided to the assistant for refining its responses.
+* **File Uploads**: Business-related documents uploaded for the assistant's training.
 
-## 📖 Documentation Structure
+## Setting Up the OpenAI Assistant
 
-- **Introduction & Key Concepts** - Understanding the basics
-- **Setting Up OpenAI Assistant** - API keys, file uploads, assistant creation
-- **Flow Integration** - Building chatbots with AI capabilities
-- **Intent Detection** - Capturing structured data from user queries
-- **Embeddings & Vector Stores** - Advanced knowledge management
-- **Best Practices** - Production deployment tips
+### Access the Integration
 
-## 🛠️ Requirements
+**Navigate to Integrations**
 
-- alexa360 account
-- OpenAI API key
-- Basic understanding of chatbot flows
+In your alexa360 dashboard, navigate to **Integrations → OpenAI**.
 
-## 📸 Screenshots Included
+{% embed url="https://raw.githubusercontent.com/MagedDevOps/alexa360-openai-guide/main/media/Screenshot%202025-08-20%20101459.png" %}
 
-The guide includes comprehensive screenshots showing:
-- Dashboard navigation
-- Configuration screens
-- Flow building examples
-- Integration settings
+### API Key Configuration
 
-## 🔗 Resources
+**Generate OpenAI API Key**
 
-- [OpenAI API Documentation](https://platform.openai.com/docs)
-- [alexa360 Support Center](https://support.alexa360.com)
-- [GitBook Platform](https://gitbook.com)
+Follow these steps to configure your API key:
 
-## 📝 Contributing
+1. Generate your OpenAI API key at [https://platform.openai.com](https://platform.openai.com)
+2. Login with your credentials → Go to your profile (top-right corner) → **View API Keys**
+3. Copy your API key and paste it into alexa360 OpenAI settings
+4. Click **Save** to establish the connection
 
-Feel free to submit issues, feature requests, or pull requests to improve this guide.
+### Uploading Files
 
-## 📄 License
+**Upload Business Documents**
 
-This documentation is provided as-is for educational and implementation purposes.
+{% embed url="https://raw.githubusercontent.com/MagedDevOps/alexa360-openai-guide/main/media/1.png" %}
 
----
+* Under the **Files** tab, upload relevant business documents to train your assistant
+* Files can be uploaded via button or file URL
+* Recommended file size limit: 200 MB
 
-**Ready to build intelligent chatbots?** Start with this guide and transform your alexa360 experience with OpenAI integration! 🚀
+### Creating an Assistant
+
+{% embed url="https://raw.githubusercontent.com/MagedDevOps/alexa360-openai-guide/main/media/assisstant.png" %}
+
+**Create New Assistant**
+
+1. Click **New Assistant**
+2. Enter **name**, **description**, and select a **model** (default: gpt-4 turbo)
+3. Provide **instructions** (tone, style, persona---up to 20,000 characters)
+4. Attach previously uploaded files relevant to the assistant's function
+
+**Save & Sync**
+
+* Click **Create** to generate the assistant
+* The assistant will also sync with your OpenAI account
+
+**✅ Success!** Your OpenAI Assistant is now ready to use in your chatbot flows!
+
+## Using the Assistant in Your Flow
+
+### Building the Flow
+
+**Create Flow**
+
+Create a new flow in alexa360 to incorporate the assistant.
+
+{% embed url="https://raw.githubusercontent.com/MagedDevOps/alexa360-openai-guide/main/media/6.png" %}
+
+### Question Block Configuration
+
+**Add Question Block**
+
+Add a question block prompting input, e.g., _"What can I help you with today?"_
+
+### OpenAI Assistant Integration
+
+**Select Integration**
+
+Under **Integrations**, select **OpenAI → Create Assistant Completion**.
+
+{% embed url="https://raw.githubusercontent.com/MagedDevOps/alexa360-openai-guide/main/media/4.png" %}
+
+### Configuration Options
+
+**Configure Assistant Settings**
+
+{% embed url="https://raw.githubusercontent.com/MagedDevOps/alexa360-openai-guide/main/media/5.png" %}
+
+* **Remember History**: Choose whether the assistant should retain conversation history
+* **Assistant ID**: Enter the ID of the assistant you created earlier
+* **Model Override** (Optional): Override the assistant's default model
+* **User Input**: Map the user's text input into the Content field
+
+### Testing & Saving
+
+**Test & Save**
+
+1. Try a sample query like _"What is your offer?"_
+2. Review the assistant's response
+3. Save the completion once satisfied
+
+## Mapping the Assistant Response
+
+**Run Test Request**
+
+In the **Create Assistant Completion** block, run a **Test Request**.
+
+**Access Sample Data**
+
+Open the **Sample Data** section.
+
+**Map Response Values**
+
+{% embed url="https://raw.githubusercontent.com/MagedDevOps/alexa360-openai-guide/main/media/Screenshot%202025-08-20%20104536.png" %}
+
+1. Click the **Map** icon → Select the assistant reply value
+2. Assign it to a custom field (e.g., `assistant_reply`)
+3. Save your mapping
+
+**ℹ️ Note:** You can now reuse the assistant's replies in messages throughout your flows.
+
+## Intent Detection with OpenAI
+
+alexa360 offers an intent detection system powered by OpenAI. This lets you capture **parameters** from user queries, similar to Google Dialogflow.
+
+{% embed url="https://raw.githubusercontent.com/MagedDevOps/alexa360-openai-guide/main/media/Screenshot%202025-08-20%20104659.png" %}
+
+### Workflow Setup
+
+**Enable Auto Intent Detection**
+
+* Go to **Automations** → enable the **Auto Intent Detect** slider
+* If you get an error, ensure OpenAI integration is configured correctly
+
+### Creating Intents
+
+**Create New Intent**
+
+{% embed url="https://raw.githubusercontent.com/MagedDevOps/alexa360-openai-guide/main/media/Screenshot%202025-08-20%20104744.png" %}
+
+1. Click **+ New Intent**
+2. Define intent name, description, and sample training phrases
+3. Add **parameters** with value options (like location, date, product)
+4. Assign a subflow to trigger once all required parameters are filled
+
+### Best Practices for Intents
+
+**Intent Management**
+
+* Clear stored parameters after intent completion to avoid using outdated data
+* Save intent values in JSON custom fields and reset them at the end of each flow
+* Remember the bot hierarchy: **Intents → Keywords → Default Reply**
+
+**⚠️ Token Usage:** Token usage increases with the number of parameters in an intent and higher confidence thresholds.
+
+## Creating & Using Embeddings
+
+Embeddings help match user inputs with business knowledge, allowing highly relevant responses.
+
+### Creating an Embedding
+
+**Navigate to Embeddings**
+
+Go to **Integrations → OpenAI → New Embedding**.
+
+**Fill Required Fields**
+
+{% embed url="https://raw.githubusercontent.com/MagedDevOps/alexa360-openai-guide/main/media/1e.png" %}
+
+* **Type**: Context category (optional, but recommended)
+* **Heading**: Title/summary of the embedding
+* **Text**: Main body (max 1000 characters)
+
+### Importing Embeddings (Bulk)
+
+* Use **Import CSV** to upload multiple embeddings at once
+* CSV must include headers: `type, heading, text`
+* Ensure headers are lowercase and not capitalized
+
+### Embedding Match & Completion
+
+* **Embedding Match**: Compares a user prompt to embeddings, returns the closest match with a **score**
+* **Completion**: Uses the matched embedding as context for generating a response
+* Recommended score threshold: ≥0.79 for accuracy (test for your use case)
+
+## Vector Stores (Advanced)
+
+Vector Stores allow you to store and retrieve information in a way that is optimized for semantic search. Instead of matching keywords, vector stores use embeddings (numerical representations of text) to find the most relevant pieces of information based on meaning.
+
+This feature is especially useful for building chatbots that can answer domain-specific questions directly from large sets of business documents, FAQs, or customer knowledge bases.
+
+**Key Concepts**
+
+* **Embedding**: A numerical vector representation of text. Two pieces of text with similar meaning will have embeddings that are close to each other.
+* **Vector Store**: A structured storage system in alexa360 that holds embeddings for fast semantic search.
+* **Match Score**: A similarity score (0 → 1.0) that shows how closely the user's query matches a stored embedding.
+* **Context Retrieval**: Pulling the most relevant text from the vector store to use as context for the assistant's response.
+
+### Creating a Vector Store
+
+**Navigate to Vector Stores**
+
+Navigate to **Integrations → OpenAI → Vector Stores** in your alexa360 dashboard.
+
+**Create New Store**
+
+{% embed url="https://raw.githubusercontent.com/MagedDevOps/alexa360-openai-guide/main/media/Screenshot%202025-08-20%20104942.png" %}
+
+1. Click **New Vector Store**
+2. **Name**: A descriptive name (e.g., "Product Catalog", "Support KB")
+3. **Description**: Purpose of this store
+4. **Model for Embeddings**: Choose which OpenAI embedding model to use (e.g., `text-embedding-3-large`)
+5. Save the Vector Store
+
+### Adding Data to a Vector Store
+
+**Add Individual Embeddings**
+
+1. Open your Vector Store and click **Add Embedding**
+2. **Type** (optional): A category or context tag (e.g., "Pricing", "Returns")
+3. **Heading**: Title/summary of the entry
+4. **Text**: Full content (max 1000 characters)
+
+**Bulk Import via CSV**
+
+{% embed url="https://raw.githubusercontent.com/MagedDevOps/alexa360-openai-guide/main/media/3v.png" %}
+
+* Use **CSV upload** for bulk imports
+* Ensure the file has lowercase headers (`type, heading, text`)
+* Each row represents one embedding record
+
+### Using Vector Stores in Flows
+
+**Add Vector Store Search Block**
+
+{% embed url="https://raw.githubusercontent.com/MagedDevOps/alexa360-openai-guide/main/media/4v.png" %}
+
+In your flow, add an **OpenAI → Vector Store Search** block.
+
+**Configure Search Parameters**
+
+1. Map the **user input** as the query
+2. **Top N Results**: How many embeddings to return (e.g., 3)
+3. **Match Threshold**: Minimum similarity score required (e.g., ≥0.79)
+4. Map results into custom fields (e.g., `best_heading`, `best_text`, `best_score`)
+
+### Example Flow: FAQ Knowledge Base
+
+1. **Trigger**: User asks → _"Do you offer free trials?"_
+2. **Vector Store Search**:
+   * Input: user's query
+   * Output: matched embedding → "Free trial" (score 0.90)
+3. **Assistant Completion**:
+   * Prompt includes retrieved text: _"Based on company policy: alexa360 offers a 14-day free trial with no credit card required."_
+4. **Response**: AI-generated reply grounded in the knowledge base
+
+### Best Practices for Vector Stores
+
+* Keep embeddings concise (≤1000 characters each). Split long docs into smaller sections.
+* Use descriptive **headings** for faster troubleshooting and search.
+* Test different **thresholds** (0.75--0.85) to balance accuracy and flexibility.
+* Regularly update embeddings as your business information changes.
+* Combine **vector search + assistant completion** for the best mix of retrieval + generative AI.
+
+**✅ With Vector Stores,** your alexa360 chatbot moves from generic AI to a knowledge-driven virtual assistant, capable of answering with accuracy, grounded in your business data.
+
+## Advanced Usage and Considerations
+
+* **Multiple OpenAI Actions**: alexa360 provides various OpenAI actions (e.g., list assistant files, create assistant, embeddings).
+* **Looping Conversations**: You can loop back to the assistant completion to create ongoing dialogue-like interactions.
+* **Custom Fields**: Store assistant replies in custom fields for later use in flows or messages.
+
+## Practical Use Cases
+
+* **Website Widget Support**: AI-powered FAQs and live chat escalation.
+* **E-commerce**: Order tracking, returns, personalized product recommendations.
+* **Facebook & Instagram Comments**: Automatically reply with relevant answers instead of generic responses.
+* **Knowledge Base Bots**: Use embeddings + assistant completions to answer questions from uploaded docs.
+
+## Summary & Best Practices
+
+By integrating OpenAI with alexa360, you can:
+
+* Build assistants trained on your own data
+* Use AI for FAQs, support, bookings, and sales
+* Detect intents and capture structured data
+* Match and generate responses using embeddings
+* Implement advanced vector stores for semantic search
+
+This empowers your chatbot to deliver **natural, context-aware, and business-specific answers**---enhancing customer experience and reducing manual workload.
+
+**ℹ️ Additional Resources:**
+
+* OpenAI API Documentation: [https://platform.openai.com/docs](https://platform.openai.com/docs)
+* alexa360 Support Center: Contact support for implementation assistance
+* Best Practices Guide: Review advanced configuration options in your dashboard

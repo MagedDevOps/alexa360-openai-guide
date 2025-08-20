@@ -1,4 +1,4 @@
-# Summary
+# Table of contents
 
-* [Introduction](README.md)
-* [Full Guide](output.md)
+* [Full Guide](README.md)
+  * [Page 1](output/page-1.md)
