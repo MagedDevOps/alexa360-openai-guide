@@ -14,7 +14,7 @@ is a virtual assistant trained on your specific business data, enabling
 it to answer user inquiries effectively.
 
 <figure id="fig:integration">
-<p><img src="https://github.com/MagedDevOps/alexa360-openai-guide/raw/main/media/Screenshot%202025-08-20%20100224.png" alt="OpenAI Integration Dashboard" />
+<p><img src="media/Screenshot 2025-08-20 100224.png" alt="OpenAI Integration Dashboard" />
 <span id="fig:integration" data-label="fig:integration"></span></p>
 </figure>
 
@@ -44,7 +44,7 @@ it to answer user inquiries effectively.
 In your alexa360 dashboard, navigate to **Integrations → OpenAI**.
 
 <figure id="fig:integration">
-<p><img src="https://github.com/MagedDevOps/alexa360-openai-guide/blob/main/media/Screenshot%202025-08-20%20101459.png?raw=true" alt="API Key Configuration" />
+<p><img src="media/Screenshot 2025-08-20 101459.png" alt="API Key Configuration" />
 <span id="fig:integration" data-label="fig:integration"></span></p>
 </figure>
 
