@@ -14,7 +14,7 @@ is a virtual assistant trained on your specific business data, enabling
 it to answer user inquiries effectively.
 
 <figure id="fig:integration">
-<p><img src="./media/Screenshot 2025-08-20 100224.png" alt="image" />
+<p><img src="https://raw.githubusercontent.com/MagedDevOps/alexa360-openai-guide/main/media/Screenshot%202025-08-20%20100224.png" alt="OpenAI Integration Dashboard" />
 <span id="fig:integration" data-label="fig:integration"></span></p>
 </figure>
 
@@ -44,7 +44,7 @@ it to answer user inquiries effectively.
 In your alexa360 dashboard, navigate to **Integrations → OpenAI**.
 
 <figure id="fig:integration">
-<p><img src="./media/Screenshot 2025-08-20 101459.png" alt="image" />
+<p><img src="https://raw.githubusercontent.com/MagedDevOps/alexa360-openai-guide/main/media/Screenshot%202025-08-20%20101459.png" alt="API Key Configuration" />
 <span id="fig:integration" data-label="fig:integration"></span></p>
 </figure>
 
@@ -75,7 +75,7 @@ Follow these steps to configure your API key:
 - Recommended file size limit: 200 MB
 
 <figure id="fig:integration">
-<p><img src="./media/1.png" alt="image" /> <span id="fig:integration"
+<p><img src="https://raw.githubusercontent.com/MagedDevOps/alexa360-openai-guide/main/media/1.png" alt="File Upload Interface" /> <span id="fig:integration"
 data-label="fig:integration"></span></p>
 </figure>
 
@@ -95,7 +95,7 @@ data-label="fig:integration"></span></p>
     function
 
 <figure id="fig:integration">
-<p><img src="./media/assisstant.png" alt="image" /> <span
+<p><img src="https://raw.githubusercontent.com/MagedDevOps/alexa360-openai-guide/main/media/assisstant.png" alt="Assistant Creation Interface" /> <span
 id="fig:integration" data-label="fig:integration"></span></p>
 </figure>
 
@@ -117,7 +117,7 @@ chatbot flows!
 Create a new flow in alexa360 to incorporate the assistant.
 
 <figure id="fig:integration">
-<p><img src="./media/6.png" alt="image" /> <span id="fig:integration"
+<p><img src="https://raw.githubusercontent.com/MagedDevOps/alexa360-openai-guide/main/media/6.png" alt="Flow Creation Interface" /> <span id="fig:integration"
 data-label="fig:integration"></span></p>
 </figure>
 
@@ -135,7 +135,7 @@ today?\"*
 Under **Integrations**, select **OpenAI → Create Assistant Completion**.
 
 <figure id="fig:integration">
-<p><img src="./media/4.png" alt="image" /> <span id="fig:integration"
+<p><img src="https://raw.githubusercontent.com/MagedDevOps/alexa360-openai-guide/main/media/4.png" alt="Integration Selection" /> <span id="fig:integration"
 data-label="fig:integration"></span></p>
 </figure>
 
@@ -153,7 +153,7 @@ data-label="fig:integration"></span></p>
 - **User Input**: Map the user's text input into the Content field
 
 <figure id="fig:integration">
-<p><img src="./media/5.png" alt="image" /> <span id="fig:integration"
+<p><img src="https://raw.githubusercontent.com/MagedDevOps/alexa360-openai-guide/main/media/5.png" alt="Configuration Options" /> <span id="fig:integration"
 data-label="fig:integration"></span></p>
 </figure>
 
@@ -186,7 +186,7 @@ Open the **Sample Data** section.
 3.  Save your mapping
 
 <figure id="fig:integration">
-<p><img src="./media/Screenshot 2025-08-20 104536.png" alt="image" />
+<p><img src="https://raw.githubusercontent.com/MagedDevOps/alexa360-openai-guide/main/media/Screenshot%202025-08-20%20104536.png" alt="Response Mapping" />
 <span id="fig:integration" data-label="fig:integration"></span></p>
 </figure>
 
@@ -208,7 +208,7 @@ Dialogflow.
 - If you get an error, ensure OpenAI integration is configured correctly
 
 <figure id="fig:integration">
-<p><img src="./media/Screenshot 2025-08-20 104659.png" alt="image" />
+<p><img src="https://raw.githubusercontent.com/MagedDevOps/alexa360-openai-guide/main/media/Screenshot%202025-08-20%20104659.png" alt="Auto Intent Detection" />
 <span id="fig:integration" data-label="fig:integration"></span></p>
 </figure>
 
@@ -225,7 +225,7 @@ Dialogflow.
 4.  Assign a subflow to trigger once all required parameters are filled
 
 <figure id="fig:integration">
-<p><img src="./media/Screenshot 2025-08-20 104744.png" alt="image" />
+<p><img src="https://raw.githubusercontent.com/MagedDevOps/alexa360-openai-guide/main/media/Screenshot%202025-08-20%20104744.png" alt="Intent Creation" />
 <span id="fig:integration" data-label="fig:integration"></span></p>
 </figure>
 
@@ -264,7 +264,7 @@ Go to **Integrations → OpenAI → New Embedding**.
 - **Text**: Main body (max 1000 characters)
 
 <figure id="fig:integration">
-<p><img src="./media/1e.png" alt="image" /> <span id="fig:integration"
+<p><img src="https://raw.githubusercontent.com/MagedDevOps/alexa360-openai-guide/main/media/1e.png" alt="Embedding Creation" /> <span id="fig:integration"
 data-label="fig:integration"></span></p>
 </figure>
 
@@ -335,7 +335,7 @@ dashboard.
 5.  Save the Vector Store
 
 <figure id="fig:integration">
-<p><img src="./media/Screenshot 2025-08-20 104942.png" alt="image" />
+<p><img src="https://raw.githubusercontent.com/MagedDevOps/alexa360-openai-guide/main/media/Screenshot%202025-08-20%20104942.png" alt="Vector Store Creation" />
 <span id="fig:integration" data-label="fig:integration"></span></p>
 </figure>
 
@@ -361,7 +361,7 @@ dashboard.
 - Each row represents one embedding record
 
 <figure id="fig:integration">
-<p><img src="./media/3v.png" alt="image" /> <span id="fig:integration"
+<p><img src="https://raw.githubusercontent.com/MagedDevOps/alexa360-openai-guide/main/media/3v.png" alt="Bulk Import Interface" /> <span id="fig:integration"
 data-label="fig:integration"></span></p>
 </figure>
 
@@ -383,7 +383,7 @@ In your flow, add an **OpenAI → Vector Store Search** block.
     `best_score`)
 
 <figure id="fig:integration">
-<p><img src="./media/4v.png" alt="image" /> <span id="fig:integration"
+<p><img src="https://raw.githubusercontent.com/MagedDevOps/alexa360-openai-guide/main/media/4v.png" alt="Search Parameters Configuration" /> <span id="fig:integration"
 data-label="fig:integration"></span></p>
 </figure>
 
